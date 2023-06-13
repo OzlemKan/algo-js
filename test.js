@@ -195,7 +195,7 @@ rl.question("Enter a number between 1 and 7: ", function (answer) {
   rl.close();
 });
 
-*/
+
 
 //ex 2.7
 
@@ -225,3 +225,87 @@ rl.question("Enter a number (n): ", function (answer) {
     }
   })();
 });
+
+
+
+// ex 3.1
+
+function sumArrayElements(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+      sum += array[i];
+    }
+    return sum;
+  }
+
+  const array1 = [1, 2, 3, 4, 5];
+  const array2 = [100, 101, 102];
+  
+  console.log("Sum of array1:", sumArrayElements(array1)); // Output: 15
+  console.log("Sum of array2:", sumArrayElements(array2));
+
+  //ex. 3. 2
+
+  function calculateAverage(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+      sum += array[i];
+    }
+    const average = sum / array.length;
+    return average;
+  }
+
+  
+  // Test with the arrays
+  const array1 = [1, 2, 3, 4, 5];
+  const array2 = [100, 101, 102];
+  
+  console.log("Average of array1:", calculateAverage(array1)); // Output: 3
+  console.log("Average of array2:", calculateAverage(array2)); // Output: 101
+
+
+
+// ex. 3.3
+
+function duplicateArray(array) {
+  const duplicate = [...array];
+  return duplicate;
+}
+
+// Test with an array
+const originalArray = [1, 2, 3, 4, 5];
+
+const newArray = duplicateArray(originalArray);
+
+console.log("Original array:", originalArray);
+console.log("Duplicate array:", newArray);
+
+
+
+//ex 3.4
+
+function findMinMax(array) {
+    let min = array[0];
+    let max = array[0];
+  
+    for (let i = 1; i < array.length; i++) {
+      if (array[i] < min) {
+        min = array[i];
+      }
+      if (array[i] > max) {
+        max = array[i];
+      }
+    }
+  
+    return [min, max];
+  }
+  
+  // Test with an array
+  const numbers = [5, 2, 8, 1, 9, 3];
+  
+  const [min, max] = findMinMax(numbers);
+  
+  console.log("Minimum:", min);
+  console.log("Maximum:", max);
+  
+  */
